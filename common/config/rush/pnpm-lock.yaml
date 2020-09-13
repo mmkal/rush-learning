@@ -1,0 +1,13 @@
+dependencies:
+  '@rush-temp/fs-syncer': 'file:projects/fs-syncer.tgz'
+lockfileVersion: 5.1
+packages:
+  'file:projects/fs-syncer.tgz':
+    dev: false
+    name: '@rush-temp/fs-syncer'
+    resolution:
+      integrity: sha512-a1vIeZFHjfDqwzQUyZLTYyA1iHPc5YgAR0PugMQBHVin3rgQ/z/PMKNhOJCtteuyvHK37X4EOK+kXc/x4p9Qdw==
+      tarball: 'file:projects/fs-syncer.tgz'
+    version: 0.0.0
+specifiers:
+  '@rush-temp/fs-syncer': 'file:./projects/fs-syncer.tgz'
