@@ -1,0 +1,26 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "files.associations": {
+    ".env*": "shellscript"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+  "javascript.implicitProjectConfig.checkJs": true,
+  "eslint.validate": ["markdown", "javascript", "typescript", "yaml"],
+  "eslint.packageManager": "pnpm",
+  // "eslint.nodePath": "tools/node-pkg/node_modules;C:\\Users\\mkale\\src\\rush-learning\\tools\\node-pkg;C:\\Users\\mkale\\src\\rush-learning\\tools\\node-pkg\\node_modules;tools/node-pkg;common/temp;common/temp;node_modules",
+  // "eslint.debug": true,
+  // "eslint.workingDirectories": [
+  //   { "pattern": "./packages/*/" },
+  //   { "pattern": "./tools/*/" }
+  // ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
