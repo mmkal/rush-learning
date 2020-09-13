@@ -21,5 +21,10 @@
     "typings",
     "test",
     "testing"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^14.10.1",
+    "typescript": "^4.0.2",
+    "@types/jest": "~26.0.13"
+  }
 }

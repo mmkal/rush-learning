@@ -380,6 +380,10 @@
     {
       "packageName": "fs-syncer",
       "projectFolder": "libraries/fs-syncer"
+    },
+    {
+      "packageName": "expect-type",
+      "projectFolder": "libraries/expect-type"
     }
     // {
     //   /**
