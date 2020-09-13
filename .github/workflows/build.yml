@@ -8,5 +8,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
     - name: run ci
-      run: node common/scripts/install-run-rush.js build
+      run: |
+        node common/scripts/install-run-rush.js install
+        node common/scripts/install-run-rush.js build
