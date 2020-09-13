@@ -62,7 +62,7 @@
      * The default value is false to avoid legacy compatibility issues.
      * It is strongly recommended to set strictPeerDependencies=true.
      */
-    "strictPeerDependencies": true,
+    "strictPeerDependencies": false,
 
     /**
      * Configures the strategy used to select versions during installation.
@@ -368,12 +368,16 @@
    */
   "projects": [
     {
+      "packageName": "@mmkal/node-pkg",
+      "projectFolder": "tools/node-pkg"
+    },
+    {
       "packageName": "fs-syncer",
-      "projectFolder": "libraries/fs-syncer"
+      "projectFolder": "packages/fs-syncer"
     },
     {
       "packageName": "expect-type",
-      "projectFolder": "libraries/expect-type"
+      "projectFolder": "packages/expect-type"
     }
     // {
     //   /**

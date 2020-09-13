@@ -1,6 +1,7 @@
 dependencies:
   '@rush-temp/expect-type': 'file:projects/expect-type.tgz'
   '@rush-temp/fs-syncer': 'file:projects/fs-syncer.tgz'
+  '@rush-temp/node-pkg': 'file:projects/node-pkg.tgz'
   '@types/jest': 26.0.13
   '@types/node': 14.10.1
   typescript: 4.0.2
@@ -166,7 +167,7 @@ packages:
     dev: false
     name: '@rush-temp/expect-type'
     resolution:
-      integrity: sha512-vUNFCtxnkDKFBi4k+GfuRuTXGNni9OxrDQVfRLmeSSoPt7IZxDq6FjVWpT3hzY+fqPQ4pskCPjjBj0mC6luFZQ==
+      integrity: sha512-S/jswu7iSLU5TL/pqnoZgKjW6S4irxcKf5eudR+Os2cCdU/F7i/Vgyg0b+G8nHAvstOjgMeUV8vzkblx0FrQXg==
       tarball: 'file:projects/expect-type.tgz'
     version: 0.0.0
   'file:projects/fs-syncer.tgz':
@@ -178,13 +179,25 @@ packages:
     dev: false
     name: '@rush-temp/fs-syncer'
     resolution:
-      integrity: sha512-1P4IAa0rw7bwc8fhEph38wCkbdxbtsyFbhCGpzNeE8ioo5/E+CnazKMGZUGgr8HFwv84ttipz5TJPZxHVxdxzQ==
+      integrity: sha512-zQNgkdqnUn8pP5dS74bk4peduaEyBVx0/I6WH1Tkotzg1xzs01q6wEVPxz9VtObpuG1RxrE52FO7yjSa4eU9VA==
       tarball: 'file:projects/fs-syncer.tgz'
+    version: 0.0.0
+  'file:projects/node-pkg.tgz':
+    dependencies:
+      '@types/jest': 26.0.13
+      '@types/node': 14.10.1
+      typescript: 4.0.2
+    dev: false
+    name: '@rush-temp/node-pkg'
+    resolution:
+      integrity: sha512-C5ONKyhWop2WibbDMViwXG2oBlKs5R6ovL6Joa9Xs30VrMdlKeSAw3y/kxQTH1MTqLTpM4MP6TfS852aGTNa6g==
+      tarball: 'file:projects/node-pkg.tgz'
     version: 0.0.0
 registry: ''
 specifiers:
   '@rush-temp/expect-type': 'file:./projects/expect-type.tgz'
   '@rush-temp/fs-syncer': 'file:./projects/fs-syncer.tgz'
+  '@rush-temp/node-pkg': 'file:./projects/node-pkg.tgz'
   '@types/jest': ~26.0.13
   '@types/node': ^14.10.1
   typescript: ^4.0.2

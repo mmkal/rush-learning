@@ -3,7 +3,8 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "tsBuildInfoFile": "dist/buildinfo.json"
+    "tsBuildInfoFile": "dist/buildinfo.json",
+    "typeRoots": ["node_modules/@mmkal/node-pkg/node_modules/@types"]
   },
   "exclude": ["node_modules", "dist"]
 }
