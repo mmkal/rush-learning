@@ -1,13 +1,179 @@
 dependencies:
   '@rush-temp/fs-syncer': 'file:projects/fs-syncer.tgz'
+  '@types/jest': 26.0.13
+  '@types/node': 14.10.1
+  expect-type: 0.7.9
+  typescript: 4.0.2
 lockfileVersion: 5.1
 packages:
+  /@jest/types/25.5.0:
+    dependencies:
+      '@types/istanbul-lib-coverage': 2.0.3
+      '@types/istanbul-reports': 1.1.2
+      '@types/yargs': 15.0.5
+      chalk: 3.0.0
+    dev: false
+    engines:
+      node: '>= 8.3'
+    resolution:
+      integrity: sha512-OXD0RgQ86Tu3MazKo8bnrkDRaDXXMGUqd+kTtLtK1Zb7CRzQcaSRPPPV37SvYTdevXEBVxe0HXylEjs8ibkmCw==
+  /@types/color-name/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+  /@types/istanbul-lib-coverage/2.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-sz7iLqvVUg1gIedBOvlkxPlc8/uVzyS5OwGz1cKjXzkl3FpL3al0crU8YGU1WoHkxn0Wxbw5tyi6hvzJKNzFsw==
+  /@types/istanbul-lib-report/3.0.0:
+    dependencies:
+      '@types/istanbul-lib-coverage': 2.0.3
+    dev: false
+    resolution:
+      integrity: sha512-plGgXAPfVKFoYfa9NpYDAkseG+g6Jr294RqeqcqDixSbU34MZVJRi/P+7Y8GDpzkEwLaGZZOpKIEmeVZNtKsrg==
+  /@types/istanbul-reports/1.1.2:
+    dependencies:
+      '@types/istanbul-lib-coverage': 2.0.3
+      '@types/istanbul-lib-report': 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-P/W9yOX/3oPZSpaYOCQzGqgCQRXn0FFO/V8bWrCQs+wLmvVVxk6CRBXALEvNs9OHIatlnlFokfhuDo2ug01ciw==
+  /@types/jest/26.0.13:
+    dependencies:
+      jest-diff: 25.5.0
+      pretty-format: 25.5.0
+    dev: false
+    resolution:
+      integrity: sha512-sCzjKow4z9LILc6DhBvn5AkIfmQzDZkgtVVKmGwVrs5tuid38ws281D4l+7x1kP487+FlKDh5kfMZ8WSPAdmdA==
+  /@types/node/14.10.1:
+    dev: false
+    resolution:
+      integrity: sha512-aYNbO+FZ/3KGeQCEkNhHFRIzBOUgc7QvcVNKXbfnhDkSfwUv91JsQQa10rDgKSTSLkXZ1UIyPe4FJJNVgw1xWQ==
+  /@types/yargs-parser/15.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-FA/BWv8t8ZWJ+gEOnLLd8ygxH/2UFbAvgEonyfN6yWGLKc7zVjbpl2Y4CTjid9h2RfgPP6SEt6uHwEOply00yw==
+  /@types/yargs/15.0.5:
+    dependencies:
+      '@types/yargs-parser': 15.0.0
+    dev: false
+    resolution:
+      integrity: sha512-Dk/IDOPtOgubt/IaevIUbTgV7doaKkoorvOyYM2CMwuDyP89bekI7H4xLIwunNYiK9jhCkmc6pUrJk3cj2AB9w==
+  /ansi-regex/5.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak2f40Pm8JTFyM2mqxkG6ngkHO11f/lg==
+  /ansi-styles/4.2.1:
+    dependencies:
+      '@types/color-name': 1.1.1
+      color-convert: 2.0.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA==
+  /chalk/3.0.0:
+    dependencies:
+      ansi-styles: 4.2.1
+      supports-color: 7.2.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
+  /color-convert/2.0.1:
+    dependencies:
+      color-name: 1.1.4
+    dev: false
+    engines:
+      node: '>=7.0.0'
+    resolution:
+      integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==
+  /color-name/1.1.4:
+    dev: false
+    resolution:
+      integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+  /diff-sequences/25.2.6:
+    dev: false
+    engines:
+      node: '>= 8.3'
+    resolution:
+      integrity: sha512-Hq8o7+6GaZeoFjtpgvRBUknSXNeJiCx7V9Fr94ZMljNiCr9n9L8H8aJqgWOQiDDGdyn29fRNcDdRVJ5fdyihfg==
+  /expect-type/0.7.9:
+    dev: false
+    resolution:
+      integrity: sha512-jvPxXvxzcXNOoRVEw5KtT41d3b9xmeUs6zThmWTDoRuoyK5dAwtsZhUGxF1AGZvgN3LHZ0LDsN0usmK5jtdL6w==
+  /has-flag/4.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
+  /jest-diff/25.5.0:
+    dependencies:
+      chalk: 3.0.0
+      diff-sequences: 25.2.6
+      jest-get-type: 25.2.6
+      pretty-format: 25.5.0
+    dev: false
+    engines:
+      node: '>= 8.3'
+    resolution:
+      integrity: sha512-z1kygetuPiREYdNIumRpAHY6RXiGmp70YHptjdaxTWGmA085W3iCnXNx0DhflK3vwrKmrRWyY1wUpkPMVxMK7A==
+  /jest-get-type/25.2.6:
+    dev: false
+    engines:
+      node: '>= 8.3'
+    resolution:
+      integrity: sha512-DxjtyzOHjObRM+sM1knti6or+eOgcGU4xVSb2HNP1TqO4ahsT+rqZg+nyqHWJSvWgKC5cG3QjGFBqxLghiF/Ig==
+  /pretty-format/25.5.0:
+    dependencies:
+      '@jest/types': 25.5.0
+      ansi-regex: 5.0.0
+      ansi-styles: 4.2.1
+      react-is: 16.13.1
+    dev: false
+    engines:
+      node: '>= 8.3'
+    resolution:
+      integrity: sha512-kbo/kq2LQ/A/is0PQwsEHM7Ca6//bGPPvU6UnsdDRSKTWxT/ru/xb88v4BJf6a69H+uTytOEsTusT9ksd/1iWQ==
+  /react-is/16.13.1:
+    dev: false
+    resolution:
+      integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+  /supports-color/7.2.0:
+    dependencies:
+      has-flag: 4.0.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
+  /typescript/4.0.2:
+    dev: false
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
   'file:projects/fs-syncer.tgz':
+    dependencies:
+      '@types/jest': 26.0.13
+      '@types/node': 14.10.1
+      expect-type: 0.7.9
+      typescript: 4.0.2
     dev: false
     name: '@rush-temp/fs-syncer'
     resolution:
-      integrity: sha512-a1vIeZFHjfDqwzQUyZLTYyA1iHPc5YgAR0PugMQBHVin3rgQ/z/PMKNhOJCtteuyvHK37X4EOK+kXc/x4p9Qdw==
+      integrity: sha512-1rLqHoxn5hNBqOZQN14zXyud07D0N55xjdjNMdTtsd5IB1G7oGpBiQmrAz6zvWaQ0xidDTtUQpIGvYVHeyptcg==
       tarball: 'file:projects/fs-syncer.tgz'
     version: 0.0.0
+registry: ''
 specifiers:
   '@rush-temp/fs-syncer': 'file:./projects/fs-syncer.tgz'
+  '@types/jest': ~26.0.13
+  '@types/node': ^14.10.1
+  expect-type: ~0.7.9
+  typescript: ^4.0.2
