@@ -1,8 +1,8 @@
 # @mmkal/node-pkg
 
-A preset/dev dependency bundle with jest, eslint and tsconfig presets/dependencies/configs/passthrough bin scripts exposed.
+A bundle with jest, eslint and tsconfig presets/dependencies/configs/passthrough bin scripts exposed.
 
-Usage:
+Usage (note - these instructions assume you're using pnpm in a monorepo, but they should also work with a regular npm single-package repo. yarn/lerna monorepos with hoisting enabled may differ slightly, since hoisting means node_modules layout can vary):
 
 ```bash
 pnpm install --save-dev @mmkal/node-pkg
@@ -24,7 +24,7 @@ Use the passthrough bin script `run` in package.json to access `tsc` and `eslint
 ## .eslintrc.js
 
 ```js
-module.export = require('@mmkal/node-pkg').eslint
+module.exports = require('@mmkal/node-pkg').eslint
 ```
 
 ## tsconfig.json

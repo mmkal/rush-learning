@@ -2,6 +2,8 @@ import * as a from '..'
 import {expectTypeOf} from '..'
 
 test('boolean type logic', () => {
+  expectTypeOf(a).toHaveProperty('expectTypeOf')
+
   expectTypeOf<a.And<[true, true]>>().toEqualTypeOf<true>()
   expectTypeOf<a.And<[true, true]>>().toEqualTypeOf<true>()
   expectTypeOf<a.And<[true, false]>>().toEqualTypeOf<false>()

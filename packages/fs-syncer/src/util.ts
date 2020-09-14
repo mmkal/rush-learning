@@ -1,6 +1,5 @@
 type Route = string[]
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const get = (obj: any, path: Route) => path.reduce((val, key) => val?.[key], obj)
 
 export const getPaths = (obj: unknown, route: Route = []): Route[] => {
