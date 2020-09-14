@@ -1,7 +1,7 @@
 {
   "changes": [
     {
-      "comment": "overwrite message",
+      "comment": "overwrite message 2",
       "type": "minor",
       "packageName": "expect-type"
     }
