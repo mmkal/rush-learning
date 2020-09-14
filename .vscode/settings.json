@@ -15,11 +15,7 @@
   "eslint.validate": ["markdown", "javascript", "typescript", "yaml"],
   "eslint.packageManager": "pnpm",
   "eslint.nodePath": "C:\\Users\\mkale\\src\\rush-learning\\tools\\node-pkg\\node_modules",
-  "eslint.debug": true,
-  // "eslint.workingDirectories": [
-  //   { "pattern": "./packages/*/" },
-  //   { "pattern": "./tools/*/" }
-  // ],
+  // "eslint.debug": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }

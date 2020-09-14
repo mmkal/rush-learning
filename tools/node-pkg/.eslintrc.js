@@ -1,44 +1,20 @@
 require('@rushstack/eslint-config/patch/modern-module-resolution')
-var pkg = require('./package.json')
-var dependencies = Object.keys(pkg.dependencies || {})
-var pkgName = pkg.name
-var path = require('path')
 
-// todo: this doesn't do the trick when trying to use vscode
-// so use code patch in readme somehow instead
-// or do a monkeypatch along those lines instead
-
-// monkeypatch from hell makes eslint load all of a config's
-// dependencies.
-function patchRequire(original, filepath) {
-  return function (name) {
-    var idx = dependencies.indexOf(name)
-    if (idx > -1) {
-      name = path.join(__dirname, 'node_modules', name)
-      return original(name)
+// todo: when https://github.com/eslint/rfcs/pull/9 is implemented, none of this nonsense will be necessary. plugins/configs can be loaded as objects then. but it's kinda far off I guess
+const ModuleResolver = require('eslint/lib/shared/relative-module-resolver')
+if (!ModuleResolver.originalResolve) {
+  ModuleResolver.originalResolve = ModuleResolver.resolve
+  ModuleResolver.resolve = (req, relTo) => {
+    try {
+      return ModuleResolver.originalResolve(req, relTo)
+    } catch (e) {
+      if (module.exports.plugins.includes(req.replace('eslint-plugin-', ''))) {
+        return require.resolve(req)
+      }
+      throw e
     }
-    if (path.isAbsolute(name)) {
-      return original(name)
-    }
-    if (name === pkgName) {
-      return module.exports
-    }
-    if (name.charAt(0) === '.') {
-      return original(path.join(path.dirname(filepath), name))
-    }
-    return original(path.join(path.dirname(filepath), '..', '..', 'node_modules', name))
   }
 }
-
-// TODO assertions that these are correct, or otherwise scan for the
-// files in question.
-var cliEngine = module.parent.parent.parent
-var configFile = cliEngine.children[5].children[0]
-var configFileRequire = configFile.require
-var cliEngineRequire = cliEngine.require
-
-cliEngine.require = patchRequire(cliEngineRequire, cliEngine.filename)
-configFile.require = patchRequire(configFileRequire, configFile.filename)
 
 module.exports = {
   extends: ['@rushstack/eslint-config'],

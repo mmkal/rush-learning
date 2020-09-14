@@ -40,7 +40,7 @@ export const fsSyncer = <T extends object>(baseDir: string, targetState: T) => {
       .forEach(p => fs.unlinkSync(path.join(baseDir, ...p)))
 
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    return syncer;
+    return syncer
   }
 
   const syncer = {read, write, sync, targetState, baseDir}
