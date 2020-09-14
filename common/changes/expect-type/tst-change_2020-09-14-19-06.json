@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "expect-type",
+      "comment": "from cli again",
+      "type": "minor"
+    }
+  ],
+  "packageName": "expect-type",
+  "email": "misha.kaletsky@gmail.com"
+}
