@@ -9,7 +9,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "node tsc.js --version",
+    "build": "node run tsc --version",
     "lint": "echo pretend i am lint"
   },
   "dependencies": {
