@@ -369,15 +369,18 @@
   "projects": [
     {
       "packageName": "@mmkal/node-pkg",
-      "projectFolder": "tools/node-pkg"
+      "projectFolder": "tools/node-pkg",
+      "shouldPublish": false
     },
     {
       "packageName": "fs-syncer",
-      "projectFolder": "packages/fs-syncer"
+      "projectFolder": "packages/fs-syncer",
+      "shouldPublish": true
     },
     {
       "packageName": "expect-type",
-      "projectFolder": "packages/expect-type"
+      "projectFolder": "packages/expect-type",
+      "shouldPublish": true
     }
     // {
     //   /**
