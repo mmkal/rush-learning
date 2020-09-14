@@ -4,7 +4,8 @@
   "private": true,
   "description": "All-in-one dev dependency - designed for packages within this repo, but in theory could be used externally too",
   "bin": {
-    "run": "./run.js"
+    "run": "./run.js",
+    "init": "./init.js"
   },
   "main": "index.js",
   "types": "index.d.ts",
