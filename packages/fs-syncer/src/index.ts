@@ -46,3 +46,5 @@ export const fsSyncer = <T extends object>(baseDir: string, targetState: T) => {
 
   return syncer
 }
+
+export const a = 1
