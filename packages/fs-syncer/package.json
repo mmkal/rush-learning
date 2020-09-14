@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "run tsc -p .",
-    "lint": "eslint --debug ."
+    "lint": "run eslint --cache ."
   },
   "keywords": [
     "fs",
