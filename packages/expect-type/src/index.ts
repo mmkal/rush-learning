@@ -7,7 +7,7 @@ export type Xor<Types extends [boolean, boolean]> = Not<Eq<Types[0], Types[1]>>
 
 const secret = Symbol('secret')
 type Secret = typeof secret
-
+export const a = 2
 export type IsNever<T> = [T] extends [never] ? true : false
 export type IsAny<T> = [T] extends [Secret] ? Not<IsNever<T>> : false
 export type IsUnknown<T> = [unknown] extends [T] ? Not<IsAny<T>> : false
