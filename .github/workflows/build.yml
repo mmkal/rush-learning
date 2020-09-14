@@ -14,3 +14,4 @@ jobs:
       run: |
         node common/scripts/install-run-rush.js install
         node common/scripts/install-run-rush.js build
+        node common/scripts/install-run-rush.js lint
