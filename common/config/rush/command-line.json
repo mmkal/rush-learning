@@ -16,7 +16,7 @@
       "name": "lint",
       "summary": "Runs linter for each project",
       "enableParallelism": true
-    },
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom command.

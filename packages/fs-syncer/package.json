@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "run tsc -p .",
-    "lint": "run eslint src/index.ts"
+    "lint": "eslint --debug ."
   },
   "keywords": [
     "fs",
