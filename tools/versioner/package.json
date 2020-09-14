@@ -1,0 +1,12 @@
+{
+  "name": "@mmkal/versioner",
+  "version": "0.0.3",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo no build necessary",
+    "lint": "echo pretend i am lint"
+  },
+  "dependencies": {
+    "standard-version": "~9.0.0"
+  }
+}

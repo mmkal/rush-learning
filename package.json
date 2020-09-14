@@ -1,0 +1,7 @@
+{
+  "name": "rush-learning",
+  "description": "makefile - should have no dependencies or devDependencies",
+  "scripts": {
+    "build": "rush build"
+  }
+}

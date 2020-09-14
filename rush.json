@@ -373,6 +373,11 @@
       "shouldPublish": false
     },
     {
+      "packageName": "@mmkal/versioner",
+      "projectFolder": "tools/versioner",
+      "shouldPublish": false
+    },
+    {
       "packageName": "fs-syncer",
       "projectFolder": "packages/fs-syncer",
       "shouldPublish": true
