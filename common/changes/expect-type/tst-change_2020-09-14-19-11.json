@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "overwrite message",
+      "type": "minor",
+      "packageName": "expect-type"
+    }
+  ],
+  "packageName": "expect-type",
+  "email": "misha.kaletsky@gmail.com"
+}
