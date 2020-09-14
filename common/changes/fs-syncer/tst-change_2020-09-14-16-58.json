@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "fs-syncer",
+      "comment": "some more",
+      "type": "minor"
+    }
+  ],
+  "packageName": "fs-syncer",
+  "email": "misha.kaletsky@gmail.com"
+}

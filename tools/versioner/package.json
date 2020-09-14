@@ -7,6 +7,9 @@
     "lint": "echo pretend i am lint"
   },
   "dependencies": {
-    "standard-version": "~9.0.0"
+    "standard-version": "~9.0.0",
+    "conventional-commits-parser": "~3.1.0",
+    "git-raw-commits": "~2.0.7",
+    "concat-stream": "~2.0.0"
   }
 }
