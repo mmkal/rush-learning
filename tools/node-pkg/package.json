@@ -2,10 +2,9 @@
   "name": "@mmkal/node-pkg",
   "version": "0.0.1",
   "private": true,
-  "description": "Standard dev dependencies for this project",
+  "description": "All-in-one dev dependency - designed for packages within this repo, but in theory could be used externally too",
   "bin": {
-    "run": "./run.js",
-    "eslint": "./eslint.js"
+    "run": "./run.js"
   },
   "main": "index.js",
   "types": "index.d.ts",
