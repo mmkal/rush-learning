@@ -1,6 +1,7 @@
 name: create change files
 on:
-  - pull_request
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
   run:
