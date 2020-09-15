@@ -30,10 +30,9 @@ jobs:
         BUMP_TYPE=minor
         IS_MAJOR=$(echo "$PR_TITLE $PR_BODY" | grep 'BREAKING CHANGE' || echo '')
         IS_PATCH=$(echo "$PR_TITLE" | grep '^fix' || echo '')
-        echo "is patch $IS_PATCH ..."
         if [ -n "$IS_MAJOR" ]; then
           BUMP_TYPE=major
-        elif [ -n "IS_PATCH" ]; then
+        elif [ -n "$IS_PATCH" ]; then
           BUMP_TYPE=patch
         fi
 
