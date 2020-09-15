@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "tst change",
+      "type": "patch",
+      "packageName": "expect-type"
+    }
+  ],
+  "packageName": "expect-type",
+  "email": "mmkal@users.noreply.github.com"
+}
