@@ -44,7 +44,8 @@ jobs:
 
         if expr $(git status --porcelain | wc -l) \> 0
         then
-          git commit -a -m "chore: change files"
+          git add -A
+          git commit -m "chore: change files"
 
           remote_repo="https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git push "${remote_repo}"
