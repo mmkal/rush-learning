@@ -13,15 +13,5 @@ jobs:
     - name: run ci
       run: |
         node common/scripts/install-run-rush.js install
-
-        CHANGEFILE_JS=/home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft/rush-lib/lib/api/ChangeFile.js
-        TIMESTAMP_FN='_getTimestamp(useSeconds = false) {'
-
-        echo "patching $TIMESTAMP_FN in $CHANGEFILE_JS"
-        sed -i "s~$TIMESTAMP_FN~$TIMESTAMP_FN\nreturn 'pr' // patched_timestamp;~g" $CHANGEFILE_JS
-
-        echo "grepping for patched code, this will fail if rush code changed recently, and the sed command didn't replace anything"
-        cat $CHANGEFILE_JS | grep patched_timestamp
-
         node common/scripts/install-run-rush.js build
         node common/scripts/install-run-rush.js lint
