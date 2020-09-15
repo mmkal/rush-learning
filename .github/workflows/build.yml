@@ -13,34 +13,9 @@ jobs:
     - name: run ci
       run: |
         node common/scripts/install-run-rush.js install
-        echo lsing
-        echo lsing
-        echo lsing
-        echo lsing
-        echo lsing
-        echo lsing
-        ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0
-        ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules
-        echo lsingmicrosoft
-        echo lsingmicrosoft
-        echo lsingmicrosoft
-        echo lsingmicrosoft
-        echo lsingmicrosoft
-        echo lsingmicrosoft
         echo lsingmicrosoft
         ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        echo lsingrushstack
-        ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@rushstack
+        cat /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft/rush-lib/lib/api/ChangeFile.js
 
         node common/scripts/install-run-rush.js build
         node common/scripts/install-run-rush.js lint
