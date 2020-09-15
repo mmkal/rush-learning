@@ -2,7 +2,7 @@
   "changes": [
     {
       "comment": "tst change",
-      "type": "minor",
+      "type": "major",
       "packageName": "fs-syncer"
     }
   ],
