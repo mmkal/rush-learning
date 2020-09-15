@@ -36,5 +36,5 @@ jobs:
           BUMP_TYPE=patch
         fi
 
-        echo common/scripts/install-run-rush.js change --message "$PR_TITLE" --overwrite --bulk --bump-type $BUMP_TUPE
-        node common/scripts/install-run-rush.js change --message "$PR_TITLE" --overwrite --bulk --bump-type $BUMP_TUPE
+        echo common/scripts/install-run-rush.js change --message "$PR_TITLE" --overwrite --bulk --bump-type $BUMP_TYPE
+        node common/scripts/install-run-rush.js change --message "$PR_TITLE" --overwrite --bulk --bump-type $BUMP_TYPE
