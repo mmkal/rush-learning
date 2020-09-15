@@ -13,9 +13,14 @@ jobs:
     - name: run ci
       run: |
         node common/scripts/install-run-rush.js install
-        echo lsingmicrosoft
-        ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft
-        cat /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft/rush-lib/lib/api/ChangeFile.js
+
+        CHANGEFILE_JS=/home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft/rush-lib/lib/api/ChangeFile.js
+        TIMESTAMP_FN='_getTimestamp(useSeconds = false) {'
+
+        sed -i "s~$TIMESTAMP_FN~$TIMESTAMP_FN\nreturn 'pr' // patched_timestamp;~g" $CHANGEFILE_JS
+        cat $CHANGEFILE_JS | grep patched_timestamp
+        echo grepping for nonexistent line
+        cat $CHANGEFILE_JS | grep something_that_does_not_exist
 
         node common/scripts/install-run-rush.js build
         node common/scripts/install-run-rush.js lint
