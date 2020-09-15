@@ -28,7 +28,8 @@
     "eslint-config-xo-typescript": "~0.32.0",
     "eslint-plugin-import": "~2.22.0",
     "@typescript-eslint/eslint-plugin": "~4.1.0",
-    "jest": "~26.4.2"
+    "jest": "~26.4.2",
+    "ts-jest": "~26.3.0"
   },
   "devDependencies": {
     "@types/eslint": "~7.2.2"
