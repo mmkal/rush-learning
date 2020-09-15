@@ -372,13 +372,6 @@ function installAndRun(packageName, packageVersion, packageBinName, packageBinAr
     const rushCommonFolder = path.join(rushJsonFolder, 'common');
     const rushTempFolder = _getRushTempFolder(rushCommonFolder);
     const packageInstallFolder = _ensureAndJoinPath(rushTempFolder, 'install-run', `${packageName}@${packageVersion}`);
-    console.log({packageInstallFolder}) // !!!!
-    console.log({packageInstallFolder})
-    console.log({packageInstallFolder})
-    console.log({packageInstallFolder})
-    console.log({packageInstallFolder})
-    console.log({packageInstallFolder})
-    console.log({packageInstallFolder})
     if (!_isPackageAlreadyInstalled(packageInstallFolder)) {
         // The package isn't already installed
         _cleanInstallFolder(rushTempFolder, packageInstallFolder);
