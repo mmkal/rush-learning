@@ -13,6 +13,13 @@ jobs:
     - name: run ci
       run: |
         node common/scripts/install-run-rush.js install
+        echo lsing
+        echo lsing
+        echo lsing
+        echo lsing
+        echo lsing
+        echo lsing
         ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0
+        ls /home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules
         node common/scripts/install-run-rush.js build
         node common/scripts/install-run-rush.js lint
