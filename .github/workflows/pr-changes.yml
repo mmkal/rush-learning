@@ -1,0 +1,39 @@
+name: build
+on:
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: crupdate change files
+      env:
+        PR_BODY: ${{ github.event.pull_request.body }}
+        PR_TITLE: ${{ github.event.pull_request.title }}
+      run: |
+        node common/scripts/install-run-rush.js install
+
+        CHANGEFILE_JS=/home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft/rush-lib/lib/api/ChangeFile.js
+        TIMESTAMP_FN='_getTimestamp(useSeconds = false) {'
+
+        echo "patching $TIMESTAMP_FN in $CHANGEFILE_JS"
+        sed -i "s~$TIMESTAMP_FN~$TIMESTAMP_FN\nreturn 'pr' // patched_timestamp;~g" $CHANGEFILE_JS
+
+        echo "grepping for patched code, this will fail if rush code changed recently, and the sed command didn't replace anything"
+        cat $CHANGEFILE_JS | grep patched_timestamp
+
+        BUMP_TYPE=minor
+        IS_MAJOR=$(echo "$PR_TITLE $PR_BODY" | grep 'BREAKING CHANGE' || echo '')
+        IS_PATCH=$(echo "$PR_TITLE" | grep '^fix' || echo '')
+        if [ -n "$IS_MAJOR" ]; then
+          BUMP_TYPE=major
+        elif [ -n "IS_PATCH" ]; then
+          BUMP_TYPE=patch
+        fi
+
+        echo common/scripts/install-run-rush.js change --message "$PR_TITLE" --overwrite --bulk --bump-type $BUMP_TUPE
+        node common/scripts/install-run-rush.js change --message "$PR_TITLE" --overwrite --bulk --bump-type $BUMP_TUPE
