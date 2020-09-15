@@ -14,6 +14,7 @@ jobs:
       env:
         PR_BODY: ${{ github.event.pull_request.body }}
         PR_TITLE: ${{ github.event.pull_request.title }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
       run: |
         node common/scripts/install-run-rush.js install
 
@@ -21,7 +22,7 @@ jobs:
         TIMESTAMP_FN='_getTimestamp(useSeconds = false) {'
 
         echo "patching $TIMESTAMP_FN in $CHANGEFILE_JS"
-        sed -i "s~$TIMESTAMP_FN~$TIMESTAMP_FN\nreturn 'pr' // patched_timestamp;~g" $CHANGEFILE_JS
+        sed -i "s~$TIMESTAMP_FN~$TIMESTAMP_FN\nreturn 'pr_$PR_NUMBER' // patched_timestamp;~g" $CHANGEFILE_JS
 
         echo "grepping for patched code, this will fail if rush code changed recently, and the sed command didn't replace anything"
         cat $CHANGEFILE_JS | grep patched_timestamp
