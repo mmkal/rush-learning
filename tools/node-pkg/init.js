@@ -28,13 +28,13 @@ const runSetup = () => {
 
   const eslintrcPath = path.join(process.cwd(), '.eslintrc.js')
   if (!fs.existsSync(eslintrcPath)) {
-    fs.writeFileSync(eslintrcPath, `module.exports = require('${helperPkgJson.name}').eslint${os.EOL}`, 'utf8')
+    fs.writeFileSync(eslintrcPath, `module.exports = require('${helperPkgJson.name}/.eslintrc')${os.EOL}`, 'utf8')
   }
 
-  // const jestConfigPath = path.join(cwd, 'jest.config.js')
-  // if (!fs.existsSync(jestConfigPath)) {
-  //   fs.writeFileSync(jestConfigPath, `module.exports = require('${helperPkgJson.name}').jest${os.EOL}`, 'utf8')
-  // }
+  const jestConfigPath = path.join(cwd, 'jest.config.js')
+  if (!fs.existsSync(jestConfigPath)) {
+    fs.writeFileSync(jestConfigPath, `module.exports = require('${helperPkgJson.name}/jest.config')${os.EOL}`, 'utf8')
+  }
 
   const tsconfigPath = path.join(cwd, 'tsconfig.json')
   if (!fs.existsSync(tsconfigPath)) {

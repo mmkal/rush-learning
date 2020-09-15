@@ -1,1 +1,1 @@
-module.exports = require('@mmkal/node-pkg').eslint
+module.exports = require('@mmkal/node-pkg/.eslintrc')

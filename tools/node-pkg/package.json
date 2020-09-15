@@ -7,11 +7,10 @@
     "run": "./run.js",
     "init": "./init.js"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
   "scripts": {
     "build": "node run tsc --version",
-    "lint": "echo pretend i am lint"
+    "lint": "echo pretend i am lint",
+    "test": "echo pretend i am tests"
   },
   "dependencies": {
     "typescript": "^4.0.2",

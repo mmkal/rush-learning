@@ -1,22 +1,6 @@
 require('@rushstack/eslint-config/patch/modern-module-resolution')
 
-// todo: when https://github.com/eslint/rfcs/pull/9 is implemented, none of this nonsense will be necessary. plugins/configs can be loaded as objects then. but it's kinda far off I guess
-const ModuleResolver = require('eslint/lib/shared/relative-module-resolver')
-if (!ModuleResolver.originalResolve) {
-  ModuleResolver.originalResolve = ModuleResolver.resolve
-  ModuleResolver.resolve = (req, relTo) => {
-    try {
-      return ModuleResolver.originalResolve(req, relTo)
-    } catch (e) {
-      const plugins = new Set(module.exports.plugins)
-      const configs = new Set(module.exports.extends)
-      if (plugins.has(req.replace('eslint-plugin-', '')) || plugins.has(req) || configs.has(req.replace('eslint-config-', ''))) {
-        return require.resolve(req)
-      }
-      throw e
-    }
-  }
-}
+patchModuleResolver()
 
 module.exports = {
   plugins: [
@@ -166,4 +150,30 @@ module.exports = {
       },
     },
   ],
+}
+
+/** patch eslint's module resolver to abstract the need to use peer dependencies for every single plugin/config */
+function patchModuleResolver() {
+  // todo: when https://github.com/eslint/rfcs/pull/9 is implemented, none of this nonsense will be necessary.
+  // plugins/configs will be loadable as objects then.
+  const ModuleResolver = require('eslint/lib/shared/relative-module-resolver')
+  if (!ModuleResolver.originalResolve) {
+    ModuleResolver.originalResolve = ModuleResolver.resolve
+    ModuleResolver.resolve = (req, relTo) => {
+      try {
+        return ModuleResolver.originalResolve(req, relTo)
+      } catch (error) {
+        const plugins = new Set(module.exports.plugins)
+        const configs = new Set(module.exports.extends)
+        if (
+          plugins.has(req.replace('eslint-plugin-', ''))
+          || plugins.has(req)
+          || configs.has(req.replace('eslint-config-', ''))
+        ) {
+          return require.resolve(req)
+        }
+        throw error
+      }
+    }
+  }
 }

@@ -10,7 +10,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "run tsc -p .",
-    "lint": "run eslint --cache ."
+    "lint": "run eslint --cache .",
+    "test": "run jest"
   },
   "keywords": [
     "fs",

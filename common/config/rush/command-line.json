@@ -15,13 +15,16 @@
       "commandKind": "bulk",
       "name": "lint",
       "summary": "Runs linter for each project",
-      "enableParallelism": true
+      "enableParallelism": true,
+      "ignoreDependencyOrder": true
     },
     {
       "commandKind": "bulk",
       "name": "test",
       "summary": "Runs tests for each project",
-      "enableParallelism": true
+      "enableParallelism": true,
+      "ignoreDependencyOrder": true,
+      "allowWarningsInSuccessfulBuild": true
     }
     // {
     //   /**

@@ -24,7 +24,7 @@ Use the passthrough bin script `run` in package.json to access `tsc` and `eslint
 ## .eslintrc.js
 
 ```js
-module.exports = require('@mmkal/node-pkg').eslint
+module.exports = require('@mmkal/node-pkg/.eslintrc')
 ```
 
 ## tsconfig.json
@@ -42,4 +42,10 @@ module.exports = require('@mmkal/node-pkg').eslint
   },
   "exclude": ["node_modules", "dist"]
 }
+```
+
+## jest.config.js
+
+```js
+module.exports = require('@mmkal/node-pkg/jest.config')
 ```
