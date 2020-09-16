@@ -19,6 +19,8 @@ jobs:
       run: |
         node common/scripts/install-run-rush.js install
 
+        pwd
+        echo "$pwd/a/b/c"
         CHANGEFILE_JS=/home/runner/work/rush-learning/rush-learning/common/temp/install-run/@microsoft+rush@5.34.0-pr2172.0/node_modules/@microsoft/rush-lib/lib/api/ChangeFile.js
         TIMESTAMP_FN='_getTimestamp(useSeconds = false) {'
 
