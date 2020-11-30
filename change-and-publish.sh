@@ -1,3 +1,8 @@
+set -e
+
+echo "making sure branch isn't ahead of origin"
+git status | grep "up to date with 'origin/main'"
+
 branch_name="test-change-$(date '+%Y-%m-%d-%H-%M-%S')"
 git checkout -b $branch_name
 echo "created branch. Delete with:"
