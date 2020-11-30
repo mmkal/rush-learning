@@ -376,6 +376,11 @@
       "packageName": "pkg-b",
       "projectFolder": "packages/pkg-b",
       "shouldPublish": true
+    },
+    {
+      "packageName": "pkg-c",
+      "projectFolder": "packages/pkg-c",
+      "shouldPublish": true
     }
     // {
     //   /**
