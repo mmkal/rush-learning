@@ -9,9 +9,7 @@ packages:
   '@*/*':
     access: $all
     publish: $all # 🤞
-    proxy: npmjs
   '**':
-    proxy: npmjs
     access: $all
     publish: $all # 🤞
 logs:
