@@ -1,0 +1,22 @@
+{
+  "name": "pkg-b",
+  "entries": [
+    {
+      "version": "0.0.2",
+      "tag": "pkg-b_v0.0.2",
+      "date": "Mon, 30 Nov 2020 17:05:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "A comment"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"pkg-a\" to `0.0.2`"
+          }
+        ]
+      }
+    }
+  ]
+}
