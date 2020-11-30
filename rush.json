@@ -110,7 +110,7 @@
      *
      * This option is experimental. The default value is false.
      */
-    // "useWorkspaces": true
+    "useWorkspaces": true
   },
 
   /**
@@ -368,16 +368,12 @@
    */
   "projects": [
     {
-      "packageName": "@mmkal/node-pkg",
-      "projectFolder": "tools/node-pkg"
+      "packageName": "pkg-a",
+      "projectFolder": "packages/pkg-a"
     },
     {
-      "packageName": "fs-syncer",
-      "projectFolder": "packages/fs-syncer"
-    },
-    {
-      "packageName": "expect-type",
-      "projectFolder": "packages/expect-type"
+      "packageName": "pkg-b",
+      "projectFolder": "packages/pkg-b"
     }
     // {
     //   /**
