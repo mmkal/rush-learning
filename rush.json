@@ -369,11 +369,13 @@
   "projects": [
     {
       "packageName": "pkg-a",
-      "projectFolder": "packages/pkg-a"
+      "projectFolder": "packages/pkg-a",
+      "shouldPublish": true
     },
     {
       "packageName": "pkg-b",
-      "projectFolder": "packages/pkg-b"
+      "projectFolder": "packages/pkg-b",
+      "shouldPublish": true
     }
     // {
     //   /**
