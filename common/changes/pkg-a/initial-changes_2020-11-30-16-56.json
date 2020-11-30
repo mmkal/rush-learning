@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "pkg-a",
+      "comment": "A comment",
+      "type": "patch"
+    }
+  ],
+  "packageName": "pkg-a",
+  "email": "misha.kaletsky@gmail.com"
+}
