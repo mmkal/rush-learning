@@ -5,3 +5,7 @@ echo "git checkout main && git branch -D $branch_name"
 echo "// comment from $branch_name" >> packages/pkg-a/index.js
 git commit -am "Added comment from $branch_name"
 rush change --bulk --bump-type patch --message "$branch_name"
+git add common/changes
+git commit -m "Add changefile(s)"
+get checkout main
+git merge --squash $branch_name
