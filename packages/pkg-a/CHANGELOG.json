@@ -1,0 +1,17 @@
+{
+  "name": "pkg-a",
+  "entries": [
+    {
+      "version": "0.0.2",
+      "tag": "pkg-a_v0.0.2",
+      "date": "Mon, 30 Nov 2020 17:09:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "A comment"
+          }
+        ]
+      }
+    }
+  ]
+}
