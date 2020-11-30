@@ -1,7 +1,7 @@
 storage: ./verdaccio/storage
-# auth:
-#   htpasswd:
-#     file: ./htpasswd
+auth:
+  htpasswd:
+    file: ./htpasswd
 uplinks:
   npmjs:
     url: https://registry.npmjs.org/
