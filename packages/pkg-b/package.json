@@ -1,6 +1,6 @@
 {
   "name": "pkg-b",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "pkg-a": "workspace:*"
   }
