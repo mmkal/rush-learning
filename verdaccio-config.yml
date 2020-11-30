@@ -12,5 +12,7 @@ packages:
     proxy: npmjs
   '**':
     proxy: npmjs
+    access: $all
+    publish: $all # 🤞
 logs:
   - {type: stdout, format: pretty, level: http}
