@@ -12,5 +12,5 @@ git commit -am "Added comment from $branch_name"
 rush change --bulk --bump-type patch --message "$branch_name"
 git add common/changes
 git commit -m "Add changefile(s)"
-get checkout main
+git checkout main
 git merge --squash $branch_name
