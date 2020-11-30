@@ -14,3 +14,6 @@ git add common/changes
 git commit -m "Add changefile(s)"
 git checkout main
 git merge --squash $branch_name
+
+echo "commit the merge, then publish with:"
+echo "rush publish --target-branch main --publish --apply"
