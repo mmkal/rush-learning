@@ -16,4 +16,4 @@ git checkout main
 git merge --squash $branch_name
 
 echo "commit the merge, then publish with:"
-echo "rush publish --target-branch main --publish --apply"
+echo "rush version --target-branch main"
