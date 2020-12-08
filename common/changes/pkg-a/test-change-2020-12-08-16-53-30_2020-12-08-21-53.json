@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "test-change-2020-12-08-16-53-30",
+      "type": "patch",
+      "packageName": "pkg-a"
+    }
+  ],
+  "packageName": "pkg-a",
+  "email": "misha.kaletsky@gmail.com"
+}
