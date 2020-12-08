@@ -2,6 +2,18 @@
   "name": "pkg-b",
   "entries": [
     {
+      "version": "0.0.3",
+      "tag": "pkg-b_v0.0.3",
+      "date": "Tue, 08 Dec 2020 21:32:39 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"pkg-a\" to `0.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.2",
       "tag": "pkg-b_v0.0.2",
       "date": "Tue, 08 Dec 2020 21:28:33 GMT",
