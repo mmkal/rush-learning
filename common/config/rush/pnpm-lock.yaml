@@ -8,4 +8,6 @@ importers:
       pkg-a: 'link:../pkg-a'
     specifiers:
       pkg-a: 'workspace:*'
+  ../../packages/pkg-c:
+    specifiers: {}
 lockfileVersion: 5.1
